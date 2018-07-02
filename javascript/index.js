@@ -9,6 +9,9 @@ var colors = [
 
   var ans = colors[3]
   var printRGB = document.querySelector("#id1")
+  var message = document.querySelector("#message")
+   var flag = 0;
+   var gameOver = false
 
   printRGB.textContent = ans
 
@@ -20,10 +23,15 @@ var colors = [
       if(this.style.backgroundColor!== ans)
       {
         this.style.backgroundColor = "#232323";
+        message.textContent = "Try Again!!"
       }
-      else {
-        alert("you won")
+      else
+      {
+        message.textContent = " YOU WONNNNNN!!!!!!!!!!!"
 
       }
     })
+
+
+
   }
