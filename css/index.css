@@ -1,0 +1,20 @@
+body{
+  background-color: #232323;
+}
+.jumbotron{
+background: blue;
+text-align: center;
+}
+.jumbotron h1,p
+{
+  color: white;
+}
+
+.square{
+background: purple;
+width: 30%;
+padding-bottom: 30%;
+float: left;
+margin:1.66%;
+border-radius: 20%;
+}
