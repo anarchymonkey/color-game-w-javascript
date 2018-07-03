@@ -6,8 +6,10 @@ var colors = generateRandomColors(23);
   var flag = 0;
   var gameOver = false
   var ans = pickedColor();
-
+  var reset = document.querySelector("#colorchange")
   printRGB.textContent = ans;
+
+
 
   for(var i = 0; i < boxes.length ; i++)
   {
@@ -18,9 +20,10 @@ var colors = generateRandomColors(23);
         {
             this.style.backgroundColor = "#232323";
             message.textContent = "Try Again!!"
+            message.style.color = "orange"
         }
         else
-        {
+        {   message.style.color = "black"
             message.textContent = " YOU WONNNNNN!!!!!!!!!!!"
             changeColors(ans)
 
@@ -28,6 +31,13 @@ var colors = generateRandomColors(23);
     })
 
   }
+
+  reset.addEventListener("click",function()
+  {
+    document.location.reload();
+  })
+
+  /* Change the color of all the boxes if correct */
 
   function changeColors(color)
   {
@@ -38,13 +48,18 @@ var colors = generateRandomColors(23);
     jumbotron.style.backgroundColor = color;
     }
   }
+  /* ************************************************************** */
+
+
+  /* FOR PICKING THE RANDOM COLOR AS ANS */
 
   function pickedColor(){
   var random =   Math.floor(Math.random() * colors.length)
 
   return colors[random]
   }
-
+/* **************************************************** */
+/* Generate Random Rgb colors */
   function randomColor()
   {
     //pick a red from 0 - 255
@@ -59,7 +74,7 @@ var colors = generateRandomColors(23);
 
     return "rgb("+ red + ", " + green + ", " + blue + ")";
   }
-
+/* PUT THOSE COLORS IN THE COLORS ARRAY */
   function generateRandomColors(num)
   {
     //make an array
