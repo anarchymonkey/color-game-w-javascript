@@ -69,9 +69,9 @@ var colors = generateRandomColors(24);
     //green 0-255
     //blue 0-255
 
-    var red = Math.floor(Math.random() *257)
-    var green = Math.floor(Math.random() *257)
-    var blue = Math.floor(Math.random() *257)
+    var red = Math.floor(Math.random() *256)
+    var green = Math.floor(Math.random() *256)
+    var blue = Math.floor(Math.random() *256)
 
     //rgb(red,greem,blue)
 
