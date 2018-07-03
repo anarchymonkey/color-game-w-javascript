@@ -1,4 +1,4 @@
-var colors = generateRandomColors(23);
+var colors = generateRandomColors(71);
   var boxes = document.querySelectorAll(".square")
   var printRGB = document.querySelector("#id1")
   var message = document.querySelector("#me")
@@ -47,7 +47,7 @@ var colors = generateRandomColors(23);
     {
       boxes[i].style.backgroundImage = "url('images/index.jpeg')";
       boxes[i].style.backgroundPosition = "center";
-      boxes[i].style.backgroundAttatchment = "fixed"; 
+      boxes[i].style.backgroundAttatchment = "fixed";
     jumbotron.style.backgroundColor = color;
     }
   }
