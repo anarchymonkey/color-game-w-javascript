@@ -9,29 +9,39 @@ var colors = [
 
   var ans = colors[3]
   var printRGB = document.querySelector("#id1")
-  var message = document.querySelector("#message")
-   var flag = 0;
-   var gameOver = false
+  var message = document.querySelector("#me")
+  var jumbotron = document.querySelector(".new")
+  var flag = 0;
+  var gameOver = false
 
-  printRGB.textContent = ans
+  printRGB.textContent = ans;
 
   for(var i = 0; i < boxes.length ; i++)
   {
     boxes[i].style.backgroundColor = colors[i]
 
     boxes[i].addEventListener("click",function(){
-      if(this.style.backgroundColor!== ans)
-      {
-        this.style.backgroundColor = "#232323";
-        message.textContent = "Try Again!!"
-      }
-      else
-      {
-        message.textContent = " YOU WONNNNNN!!!!!!!!!!!"
+        if(this.style.backgroundColor!== ans)
+        {
+            this.style.backgroundColor = "#232323";
+            message.textContent = "Try Again!!"
+        }
+        else
+        {
+            message.textContent = " YOU WONNNNNN!!!!!!!!!!!"
+            changeColors(ans)
 
-      }
+        }
     })
 
+  }
 
-
+  function changeColors(color)
+  {
+    //change each sqyares to loop to the color xD
+    for(var i = 0; i< boxes.length ; i++)
+    {
+      boxes[i].style.backgroundColor = color;
+    jumbotron.style.backgroundColor = color;
+    }
   }
