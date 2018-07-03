@@ -7,6 +7,7 @@ var colors = generateRandomColors(23);
   var gameOver = false
   var ans = pickedColor();
   var reset = document.querySelector("#colorchange")
+
   printRGB.textContent = ans;
 
 
@@ -44,7 +45,9 @@ var colors = generateRandomColors(23);
     //change each sqyares to loop to the color xD
     for(var i = 0; i< boxes.length ; i++)
     {
-      boxes[i].style.backgroundColor = color;
+      boxes[i].style.backgroundImage = "url('images/index.jpeg')";
+      boxes[i].style.backgroundPosition = "center";
+      boxes[i].style.backgroundAttatchment = "fixed"; 
     jumbotron.style.backgroundColor = color;
     }
   }
