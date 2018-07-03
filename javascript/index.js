@@ -1,4 +1,4 @@
-var colors = generateRandomColors(71);
+var colors = generateRandomColors(24);
   var boxes = document.querySelectorAll(".square")
   var printRGB = document.querySelector("#id1")
   var message = document.querySelector("#me")
